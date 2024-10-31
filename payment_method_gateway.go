@@ -22,6 +22,7 @@ type PaymentMethodRequestOptions struct {
 	FailOnDuplicatePaymentMethod  bool   `xml:"fail-on-duplicate-payment-method,omitempty"`
 	VerifyCard                    *bool  `xml:"verify-card,omitempty"`
 	VerificationMerchantAccountId string `xml:"verification-merchant-account-id,omitempty"`
+	VerificationAmount            string `xml:"verification-amount,omitempty"`
 }
 
 func (g *PaymentMethodGateway) Create(ctx context.Context, paymentMethodRequest *PaymentMethodRequest) (PaymentMethod, error) {
